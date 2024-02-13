@@ -7,17 +7,18 @@ body{
     background-color: white;
     font-family: 'Poppins', sans-serif;
     padding: 0 80px;
+    
   }
 
   .header{
     margin: 0;
-    padding: 0px 70px 0 80px;
+    padding: 0px 80px 0 80px;
     background-color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 999;
-    position: relative;
+   /* position: relative; */
     position: sticky;
     top: 0;
     left: 0;  
@@ -79,31 +80,34 @@ body{
     color: white;
   }
 
+  .header .options{
+    display: none;
+  }
+
   .hero .carousel{
-    height: 100vh;
+    height: auto;
     width: 100%;
     margin-bottom: 0px;
-    cursor: pointer;
+    /* cursor: pointer; */
   }
 
-  .carousel .img_1 {
-    width: 100%;
-    transform: translateY(-210px);
-  }
+  /* .carousel-inner{
+    height: 100vh;
+  } */
 
-  .carousel .img_2 {
-    width: 100%;
-    transform: translateY(-210px);
-  } 
-
-  .carousel .img_3 {
-    width: 100%;
-    transform: translateY(-210px);
-    
-  }
+  
 
   .carousel-caption{
     height: 200px;
+  }
+
+  .first-slide{
+    background: url("./images/caraousel/water.jpg");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
   }
 
   .first-slide .carousel-caption{
@@ -131,6 +135,14 @@ body{
     color: black;
   }
 
+  .second-slide{
+    background: url("./images/caraousel/black.jpg");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+  }
   .second-slide .carousel-caption{
     width: 1000px;
     position: absolute;
@@ -155,6 +167,14 @@ body{
     background-color: black;
   }
 
+  .third-slide{
+    background: url("./images/caraousel/matrix.jpg");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+  }
   .third-slide .carousel-caption{
     width: 700px;
     position: absolute;
@@ -180,11 +200,14 @@ body{
 
   .carousel-control-prev , .carousel-control-next{
     width: 5%;
-    height: 80%;
+    /* height: 100vh; */
+    /* position: relative; */
   }
 
   .carousel-indicators{
-    transform: translateY(-100px);
+    position: absolute;
+    bottom: 10%;
+    /* transform: translateY(-100px); */
   }
 
   .categories{
@@ -358,15 +381,17 @@ body{
 
   .big_cards .box_1{
     background-image: url("./images/collection/suits.jpg");
+    height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-y: -300px;
+    background-position: center;
   }
   .big_cards .box_2{
     background-image: url("./images/collection/denim_collection.jpg");
+    height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-y: -500px;
+    background-position: center;
   }
 
 
@@ -527,4 +552,25 @@ body{
   .footer button:hover{
     background-color: white;
     color: black;
+  }
+
+  @media screen and (max-width: 1000px) {
+
+    body{
+      padding: 0 40px;
+    }
+    .navbar{
+      display: none;
+    }
+    .header .options{
+      display: block;
+      color: white;
+      background: transparent;
+      border: none;
+    }
+    .header{
+      display: flex;
+      justify-content: space-between;
+    }
+    
   }
